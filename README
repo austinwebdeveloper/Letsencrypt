@@ -1,0 +1,20 @@
+
+To encrypt and get https
+
+# Remove all docker containers
+docker rm -f $(docker ps -aq)
+
+# create docker containers
+  curl -L https://get.docker.com | sudo bash
+
+  # creates nginx and letsencrypt containers
+  curl -L https://raw.githubusercontent.com/jamrizzi/dsrp/master/dsrp.sh | sudo bash
+
+
+  sudo docker run -d --name waitcheckcontainer     -e VIRTUAL_HOST=waitcheck.austinconversionoptimization.com     -e VIRTUAL_PORT=3000     -e LETSENCRYPT_HOST=waitcheck.austinconversionoptimization.com     -e LETSENCRYPT_EMAIL=atxwebdesigner@gmail.com     waitcheckimage
+
+ # To verify logs whether it works
+  docker logs -f letsencrypt
+
+
+  Reference:
