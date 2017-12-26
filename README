@@ -19,3 +19,6 @@ docker rm -f $(docker ps -aq)
 
   Reference:
 https://github.com/jamrizzi/dsrp
+
+Video installation
+https://youtu.be/snrJHZ8hzHU
